@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# このプロジェクトについて
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web からアクセス
 
-## Available Scripts
+このアプリケーションは Firebase Hosting を利用して Web 上に公開しています。
 
-In the project directory, you can run:
+https://triangle-demo-20e1d.web.app
 
-### `npm start`
+からアクセスできます。
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# アプリケーションの仕様
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+三角形の種類を判別する Web アプリケーションです。
 
-### `npm test`
+三角形の各辺の長さを入力して計算するボタンを押すと三角形の種類をアラートに表示します。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+三角形を作れる場合の判定条件は以下として、それぞれ三角形の判定結果を表示する。
 
-### `npm run build`
+1. 3 つの辺の長さが等しい場合、正三角形と表示する。
+2. 2 つの辺の長さが等しい場合、二等辺三角形と表示する。
+3. 3 つの辺の長さがどれも異なる場合、不等辺三角形と表示する。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+入力項目は以下の制約があります。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 正の整数のみ
+- 半角数字のみ
+- 1~99 まで
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+入力規則に違反する場合、違反した項目の下部に「1 から 99 の整数を半角数字で入力してください。」というメッセージを表示します。
+入力がない場合、違反した項目の下部に「入力してください。」というメッセージを表示します。
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+対応ブラウザは最新版の Chrome です。
