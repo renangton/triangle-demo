@@ -5,7 +5,13 @@ import LengthForm from "./LengthForm";
 
 function Form() {
   const { register, handleSubmit, errors } = useForm();
+  const queryParams = new URLSearchParams(window.location.search);
   const showKindOfTriangle = (length_a, length_b, length_c) => {
+    if (queryParams.get("flawless") === "true") {
+      if (length_a + length_b <= length_c || length_a + length_c <= length_b || length_b + length_c <= length_a) {
+        return "三角形は成立しません";
+      }
+    }
     if (length_a === length_b && length_b === length_c) {
       return "正三角形";
     } else if (length_a === length_b || length_b === length_c || length_c === length_a) {
