@@ -1,11 +1,18 @@
 /** @jsxImportSource @emotion/react */
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { css } from "@emotion/react";
 import LengthForm from "./LengthForm";
+import ResultModal from "./ResultModal";
 
 function Form() {
   const { register, handleSubmit, errors } = useForm();
+
   const queryParams = new URLSearchParams(window.location.search);
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
+
   const showKindOfTriangle = (length_a, length_b, length_c) => {
     if (queryParams.get("flawless") === "true") {
       if (length_a + length_b <= length_c || length_a + length_c <= length_b || length_b + length_c <= length_a) {
@@ -20,7 +27,19 @@ function Form() {
       return "不等辺三角形";
     }
   };
-  const onSubmit = (data) => alert(showKindOfTriangle(Number(data.length_a), Number(data.length_b), Number(data.length_c)));
+
+  const onSubmit = (data) => {
+    setModalMessage(showKindOfTriangle(Number(data.length_a), Number(data.length_b), Number(data.length_c)));
+    openModal();
+  };
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   return (
     <div>
@@ -41,6 +60,7 @@ function Form() {
           </div>
         </div>
       </section>
+      <ResultModal isOpen={modalIsOpen} message={modalMessage} onRequestClose={closeModal} />
     </div>
   );
 }
