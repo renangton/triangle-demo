@@ -14,7 +14,9 @@ function ResultModal({ isOpen, message, onRequestClose }) {
       <div css={modalBackdrop} onClick={modalBackgroundClick}>
         <div css={modalContainer}>
           <div css={modalContent}>
-            <p css={modalMessage}>{message}</p>
+            <p id="modal-message" css={modalMessage}>
+              {message}
+            </p>
             <button css={modalCloseButton} onClick={onRequestClose}>
               閉じる
             </button>
