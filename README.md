@@ -1,5 +1,21 @@
 # このプロジェクトについて
 
+# 前提
+
+npm コマンドを利用できること
+
+# ローカル環境構築
+
+`$ git clone このプロジェクトのクローンURL`  
+`$ cd triangle-demo`  
+`$ npm install`  
+`$ npm run start`  
+ブラウザから http://localhost:3000/ にアクセスする
+
+# Cypress 実行手順
+
+※上記のローカル環境構築を行い、http://localhost:3000/ にアクセスできる状態で実施すること
+
 # Web からアクセス
 
 このアプリケーションは Firebase Hosting を利用して Web 上に公開しています。
