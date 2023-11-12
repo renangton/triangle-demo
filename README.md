@@ -1,5 +1,33 @@
 # このプロジェクトについて
 
+# 前提
+
+npm コマンドを利用できること
+
+# ローカル環境構築
+
+`$ git clone このプロジェクトのクローンURL`  
+`$ cd triangle-demo`  
+`$ npm install`  
+`$ npm run start`  
+ブラウザから http://localhost:3000/ にアクセスする
+
+# Cypress 実行手順
+
+※上記のローカル環境構築を行い、http://localhost:3000/ にアクセスできる状態で実施すること
+
+### ブラウザウィンドウで実行する場合
+
+1. `$ npx cypress open`
+2. ブラウザウィンドウが立ち上がる
+3. 「E2E Testing」をクリック
+4. ブラウザを選択し、「Start E2E Testing in 選択したブラウザ」をクリック
+5. Specs を選択し、「test_triangle.cy.js」をクリック
+
+### ヘッドレスで実行する場合
+
+`$ npx cypress run --spec cypress/e2e/test_triangle.cy.js`
+
 # Web からアクセス
 
 このアプリケーションは Firebase Hosting を利用して Web 上に公開しています。

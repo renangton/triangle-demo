@@ -8,6 +8,7 @@
     "@emotion/react": "^11.11.1",
     "@hookform/error-message": "0.0.5",
     "c": "^1.1.1",
+    "cypress": "^13.4.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hook-form": "6.15.8",
