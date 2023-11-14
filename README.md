@@ -2,15 +2,17 @@
 
 # 前提
 
-npm コマンドを利用できること
+- Docker および docker-compose を利用できること
 
 # ローカル環境構築
 
 `$ git clone このプロジェクトのクローンURL`  
 `$ cd triangle-demo`  
-`$ npm install`  
-`$ npm run start`  
-ブラウザから http://localhost:3000/ にアクセスする
+`$ docker compose up --build -d`  
+ブラウザから http://localhost:3000/ にアクセスする  
+※docker-compose up から立ち上がるまでに 1 分程度待たないといけないです
+
+#### ホットリロードに対応させているため、ローカルで加えた変更が数秒でコンテナ内のアプリケーションに反映されます
 
 # Cypress 実行手順
 
