@@ -20,3 +20,4 @@ jobs:
         with:
           build: npm run build
           start: npm start
+          config: baseUrl=http://localhost:3000
