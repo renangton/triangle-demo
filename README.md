@@ -6,13 +6,24 @@
 
 # ローカル環境構築
 
+## 共通
+
 `$ git clone このプロジェクトのクローンURL`  
-`$ cd triangle-demo`  
-`$ docker compose up --build -d`  
+`$ cd triangle-demo`
+
+## ホストマシンから実行する場合
+
+※別ブランチで詳細を記述する
+
+## Docker を利用する場合
+
+`$ docker compose up`  
 ブラウザから http://localhost:3000/ にアクセスする  
 ※docker-compose up から立ち上がるまでに 1 分程度待たないといけないです
 
-#### ホットリロードに対応させているため、ローカルで加えた変更が数秒でコンテナ内のアプリケーションに反映されます
+### ホットリロードに対応させているため、ローカルで加えた変更が数秒でコンテナ内のアプリケーションに反映されます
+
+### `$ docker compose up` 時に Cypress のテストが CLI（ヘッドレス）で実行されます
 
 # Cypress 実行手順
 
