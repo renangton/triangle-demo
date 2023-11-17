@@ -18,7 +18,7 @@ function testTriangleFormErrorMessage(length) {
 
 describe("判定条件不備あり", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/");
+    cy.visit("/");
   });
 
   it("3つの辺の長さが等しい場合、正三角形と表示されること", () => {
@@ -56,7 +56,7 @@ describe("判定条件不備あり", () => {
 
 describe("判定条件不備なし", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000?flawless=true");
+    cy.visit("?flawless=true");
   });
 
   it("3つの辺の長さが等しい場合、正三角形と表示されること", () => {
