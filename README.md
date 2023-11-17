@@ -2,7 +2,7 @@
 
 # 前提
 
-- Docker および docker-compose を利用できること
+- Node.js を利用できること または Docker および docker-compose を利用できること
 
 # ローカル環境構築
 
@@ -13,7 +13,9 @@
 
 ## ホストマシンから実行する場合
 
-※別ブランチで詳細を記述する
+`$ npm install`  
+`$ npm run start`  
+ブラウザから http://localhost:3000/ にアクセスする
 
 ## Docker を利用する場合
 
@@ -25,14 +27,14 @@
 > - ホットリロードに対応させているため、ローカルで加えた変更が数秒でコンテナ内のアプリケーションに反映されます  
 > - `$ docker compose up` 時に Cypress のテストが CLI（ヘッドレス）で実行されます  
 
-# Cypress 実行手順
+# Cypress 実行手順 --ホストマシンから実行する場合--
 
 ※上記のローカル環境構築を行い、http://localhost:3000/ にアクセスできる状態で実施すること
 
-### ブラウザウィンドウで実行する場合
+### GUIで実行する場合
 
 1. `$ npx cypress open`
-2. ブラウザウィンドウが立ち上がる
+2. ウィンドウが表示される
 3. 「E2E Testing」をクリック
 4. ブラウザを選択し、「Start E2E Testing in 選択したブラウザ」をクリック
 5. Specs を選択し、「test_triangle.cy.js」をクリック
